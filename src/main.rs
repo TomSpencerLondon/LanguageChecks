@@ -30,6 +30,16 @@ fn main() {
     println!("s1 = {}", s1);
     // println!("s2 = {}", s2);
     println!("s3 = {}", s3);
+
+    let s1 = String::from("hello");
+
+    let len = calculate_length(&s1);
+
+    println!("This is s1 and len: {}, {}", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize { // s is a reference to a String
+    s.len()
 }
 
 fn takes_ownership(some_string: String) { // some_string comes into scope
